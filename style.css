@@ -112,39 +112,52 @@ header p {
     filter: brightness(100%);
 }
 
-/* SLIDE-OUT MENU */
-#sideMenu {
+/* Fullscreen dark blur overlay */
+#menuOverlay {
     position: fixed;
     top: 0;
-    left: -250px;
-
-    width: 250px;
+    left: 0;
+    width: 100%;
     height: 100%;
-    padding-top: 80px;
-
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    z-index: 900;
 }
 
-#sideMenu a {
+/* Centered menu card */
+#centerMenu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Menu links */
+#centerMenu a {
+    display: block;
+    margin: 20px 0;
+    font-size: 28px;
     color: white;
-    padding: 20px;
     text-decoration: none;
-    font-size: 24px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
 }
 
-#sideMenu a:hover {
-    background: rgba(255, 255, 255, 0.15);
+#centerMenu a:hover {
+    color: #add8e6;
 }
+
 
 /* BACK TO TOP BUTTON */
 #backToTop {
@@ -197,4 +210,81 @@ footer a {
 
 footer a:hover {
     color: white;
+}
+
+/* Fade-in animation */
+@keyframes fadeInMenu {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Centered menu card with animation */
+#centerMenu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    animation: fadeInMenu 0.35s ease-out;
+}
+
+/* X button */
+#closeButton {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+#closeButton:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Larger blue circle behind hamburger icon */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 80px;      /* increased from 60px */
+    height: 80px;     /* increased from 60px */
+    background-color: #4da6ff; /* same blue as Back to Top button */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.08);
+}
+
+/* Larger logo inside the circle */
+.hamburger img {
+    width: 48px;   /* increased from 32px */
+    height: 48px;  /* increased from 32px */
+    object-fit: contain;
 }

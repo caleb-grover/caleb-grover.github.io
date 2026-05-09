@@ -5,49 +5,52 @@
     <title>Child of God Music</title>
 
     <!-- Lora font -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Link to your CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <div id="Home"></div>
+<body id="top">
 
     <!-- Hamburger Menu Icon -->
     <div class="hamburger" onclick="toggleMenu()">
         <img src="images/CGM-logo-final.png" alt="menu icon">
     </div>
 
-    <!-- Slide-Out Menu -->
-    <nav id="sideMenu">
-        <a href="#Home">Home</a>
-        <a href="#about">About</a>
-        <a href="#worship">Worship</a>
-        <a href="#music-minor">Music Minor</a>
-        <a href="#future-plans">Future Plans</a>
-    </nav>
+    <!-- MENU OVERLAY + CENTERED MENU -->
+    <div id="menuOverlay" onclick="closeMenu()"></div>
 
-    <!-- Header Section -->
+    <div id="centerMenu">
+        <div id="closeButton" onclick="closeMenu()">✕</div>
+
+        <a href="#top" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#worship" onclick="closeMenu()">Worship</a>
+        <a href="#music-minor" onclick="closeMenu()">Music Minor</a>
+        <a href="#future-plans" onclick="closeMenu()">Future Plans</a>
+        <a href="#videos" onclick="closeMenu()">Videos</a>
+        <a href="#contact" onclick="closeMenu()">Contact Me</a>
+    </div>
+
+    <!-- HEADER -->
     <header>
         <h1>Child of God Music</h1>
         <p>Piano • Guitar • Ukulele • Vocals</p>
     </header>
 
-    <!-- Hero Photo -->
+    <!-- HERO PHOTO -->
     <section class="hero-photo">
         <img src="images/gemini-piano.png" alt="Caleb playing music">
     </section>
 
-    <!-- Intro Section -->
+    <!-- INTRO -->
     <section class="intro">
         <h2>Welcome</h2>
-        <p>
-            Hi, I'm Caleb. I play piano, guitar, and sing. This site is where I share the music I create.
-        </p>
+        <p>Hi, I'm Caleb. I play piano, guitar, and sing. This site is where I share the music I create.</p>
     </section>
 
-    <!-- ABOUT Section -->
+    <!-- ABOUT -->
     <section id="about">
         <h2>About</h2>
         <p>
@@ -58,7 +61,7 @@
         </p>
     </section>
 
-    <!-- WORSHIP Section -->
+    <!-- WORSHIP -->
     <section id="worship">
         <h2>Worship</h2>
         <p>
@@ -69,7 +72,7 @@
         </p>
     </section>
 
-    <!-- MUSIC MINOR Section -->
+    <!-- MUSIC MINOR -->
     <section id="music-minor">
         <h2>Music Minor</h2>
         <p>
@@ -79,7 +82,7 @@
         </p>
     </section>
 
-    <!-- FUTURE PLANS Section -->
+    <!-- FUTURE PLANS -->
     <section id="future-plans">
         <h2>Future Plans</h2>
         <p>
@@ -89,10 +92,9 @@
         </p>
     </section>
 
-    <!-- Videos Section -->
-    <section class="videos">
+    <!-- VIDEOS -->
+    <section id="videos">
         <h2>My Videos</h2>
-
         <div class="video">
             <iframe
                 src="https://www.youtube.com/embed/VIDEO_ID_HERE"
@@ -101,20 +103,33 @@
             </iframe>
         </div>
     </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>You can reach me at: 
+            <strong>calebgrover01@gmail.com</strong>
+        </p>
+
+        <p>Or message me on Instagram or LinkedIn using the links below.</p>
+
+           <a href="https://www.instagram.com/thecalebgrover" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/caleb-grover" target="_blank">LinkedIn</a>
+
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-    <p>© 2026 Caleb Grover</p>
-    <p>
-        <a href="https://www.instagram.com/thecalebgrover" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/in/caleb-grover" target="_blank">LinkedIn</a>
-    </p>
-</footer>
+        <p>Website designed and built by Caleb Grover</p>
+        <p>© 2026 Caleb Grover</p>
+    </footer>
 
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
 
-    <!-- Link to your JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
-
-<button id="backToTop" onclick="scrollToTop()">Back to Top</button>
-
 </html>
