@@ -4,132 +4,139 @@
     <meta charset="UTF-8">
     <title>Child of God Music</title>
 
-    <!-- Lora font -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Link to your CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/CGM-logo-final.png">
 </head>
 
 <body id="top">
 
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        <img src="images/CGM-logo-final.png" alt="menu icon">
+<!-- FIRST-TIME POPUP -->
+<div id="welcomeOverlay"></div>
+
+<div id="welcomePopup">
+    <div id="welcomeClose" onclick="closeWelcome()">✕</div>
+    <h2>Welcome!</h2>
+    <p>My name is Caleb, and this is my website to showcase how God is working through me!</p>
+    <p><i>"Let everything that has breath praise the LORD. Praise the LORD!"</i> Psalm 150:6</p>
+</div>
+
+<!-- HAMBURGER MENU -->
+<div class="hamburger" onclick="toggleMenu()">
+    <img src="images/CGM-logo-final.png" alt="menu icon">
+</div>
+
+<div id="menuOverlay" onclick="closeMenu()"></div>
+
+<div id="centerMenu">
+    <div id="closeButton" onclick="closeMenu()">✕</div>
+    <a href="#top" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#worship" onclick="closeMenu()">Worship</a>
+    <a href="#music-minor" onclick="closeMenu()">Music Minor</a>
+    <a href="#future-plans" onclick="closeMenu()">Future Plans</a>
+    <a href="#videos" onclick="closeMenu()">Videos</a>
+    <a href="#contact" onclick="closeMenu()">Contact Me</a>
+</div>
+
+<!-- HEADER -->
+<header>
+    <h1>Child of God Music</h1>
+    <p>Piano • Guitar • Ukulele • Vocals</p>
+</header>
+
+<!-- HERO PHOTO -->
+<section class="hero-photo">
+    <img src="images/gemini-piano.png" alt="Caleb playing music">
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+    <h2>Welcome</h2>
+    <p>Hi, I'm Caleb! I love Jesus, worship music, and playing music. I play piano, guitar, ukulele, and sing.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About</h2>
+    <p>
+        I'm 19 years old and I live in Burgaw, North Carolina. I've been playing music since I was 13 and singing long before that. 
+        Music has always been a huge part of my life, but even more than that, I have a deep passion for the Lord. 
+        My heart is to share the love of Christ with others through worship and to use the gifts He’s given me to glorify Him.
+    </p>
+    <p>
+        I’m currently a Business student at UNCW with a minor in Music, and I’m involved in several Christian clubs on campus that love Jesus and lead worship together.
+        I am beginning to write my own music and seeking where God wants me to go with my life.
+    </p>
+</section>
+
+<!-- WORSHIP -->
+<section id="worship">
+    <h2>Worship</h2>
+    <p>
+        I taught myself my first song on the piano before taking lessons with Mike Velie, who helped shape me into the musician I am today. 
+        Mike taught me piano and my dad guitar, and together we started the worship band at our church. 
+        I led music there for over five years and still step in to lead whenever I can.
+        Worship has always been more than music to me — it’s a way to connect with God and help others experience His presence.
+    </p>
+</section>
+
+<!-- MUSIC MINOR -->
+<section id="music-minor">
+    <h2>Music Minor</h2>
+    <p>
+        As a Music Minor at UNCW, I’m learning how to write music and deepen my understanding of worship. 
+        I meet regularly with people who share a passion for music, and I’ve learned new techniques for leading worship through my involvement with Wrightsville Beach Baptist Church.
+        Through my courses, I've learned more about music theory, composition, and the history of worship music, which has helped me grow as a musician and worship leader.
+        I continue playing and praying every day, seeking God’s direction and asking Him to guide me wherever He wants me to go.
+    </p>
+</section>
+
+<!-- FUTURE PLANS -->
+<section id="future-plans">
+    <h2>Future Plans</h2>
+    <p>
+        I am beginning to write my own music and making covers of worship songs this summer. I plan to write my own music and eventually start a band. 
+        This summer, I’ll be attending Camp Electric in Murfreesboro, Tennessee, where I’ll meet Christian artists and learn how they stepped into the music industry. 
+        I’ll also be leading Garage Band Worship Nights at my house — a chance to gather friends, worship together, and continue serving the Lord with the talents He’s given me.
+    </p>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+    <h2>My Videos</h2>
+    <div class="video">
+        <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
     </div>
+</section>
 
-    <!-- MENU OVERLAY + CENTERED MENU -->
-    <div id="menuOverlay" onclick="closeMenu()"></div>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
 
-    <div id="centerMenu">
-        <div id="closeButton" onclick="closeMenu()">✕</div>
+    <p>You can reach me at: <strong>calebgrover01@gmail.com</strong></p>
 
-        <a href="#top" onclick="closeMenu()">Home</a>
-        <a href="#about" onclick="closeMenu()">About</a>
-        <a href="#worship" onclick="closeMenu()">Worship</a>
-        <a href="#music-minor" onclick="closeMenu()">Music Minor</a>
-        <a href="#future-plans" onclick="closeMenu()">Future Plans</a>
-        <a href="#videos" onclick="closeMenu()">Videos</a>
-        <a href="#contact" onclick="closeMenu()">Contact Me</a>
-    </div>
+    <p>Or message me on Instagram or LinkedIn using the links below.</p>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Child of God Music</h1>
-        <p>Piano • Guitar • Ukulele • Vocals</p>
-    </header>
+    <p>
+        <a href="https://www.instagram.com/thecalebgrover" target="_blank">Instagram</a> |
+        <a href="https://www.linkedin.com/in/caleb-grover" target="_blank">LinkedIn</a>
+    </p>
+</section>
 
-    <!-- HERO PHOTO -->
-    <section class="hero-photo">
-        <img src="images/gemini-piano.png" alt="Caleb playing music">
-    </section>
+<!-- FOOTER -->
+<footer>
+    <p>Website designed and built by Caleb Grover</p>
+    <p>© 2026 Caleb Grover</p>
+</footer>
 
-    <!-- INTRO -->
-    <section class="intro">
-        <h2>Welcome</h2>
-        <p>Hi, I'm Caleb. I play piano, guitar, and sing. This site is where I share the music I create.</p>
-    </section>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About</h2>
-        <p>
-            I’m a 19‑year‑old Burgaw native who has been playing music since I was 13 and singing long before that. 
-            Music has always been a huge part of my life, but even more than that, I have a deep passion for the Lord. 
-            My heart is to share the love of Christ with others through worship and to use the gifts He’s given me to glorify Him. 
-            I’m currently a Business student at UNCW with a minor in Music, and I’m involved in several Christian clubs on campus that love Jesus and lead worship together.
-        </p>
-    </section>
-
-    <!-- WORSHIP -->
-    <section id="worship">
-        <h2>Worship</h2>
-        <p>
-            I taught myself my first song on the piano before taking lessons with Mike Velie, who helped shape me into the musician I am today. 
-            Mike taught me piano and my dad guitar, and together we started the worship band at our church. 
-            I led music there for over five years and still step in to lead whenever I can. 
-            Worship has always been more than music to me — it’s a way to connect with God and help others experience His presence.
-        </p>
-    </section>
-
-    <!-- MUSIC MINOR -->
-    <section id="music-minor">
-        <h2>Music Minor</h2>
-        <p>
-            As a Music Minor at UNCW, I’m learning how to write music and deepen my understanding of worship. 
-            I meet regularly with people who share a passion for music, and I’ve learned new techniques for leading worship through my involvement with Wrightsville Beach Baptist Church. 
-            I continue playing and praying every day, seeking God’s direction and asking Him to guide me wherever He wants me to go.
-        </p>
-    </section>
-
-    <!-- FUTURE PLANS -->
-    <section id="future-plans">
-        <h2>Future Plans</h2>
-        <p>
-            I plan to write my own music and eventually start a band. 
-            This summer, I’ll be attending Camp Electric in Murfreesboro, Tennessee, where I’ll meet Christian artists and learn how they stepped into the music industry. 
-            I’ll also be leading Garage Band Worship Nights at my house — a chance to gather friends, worship together, and continue serving the Lord with the talents He’s given me.
-        </p>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos">
-        <h2>My Videos</h2>
-        <div class="video">
-            <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>You can reach me at: 
-            <strong>calebgrover01@gmail.com</strong>
-        </p>
-
-        <p>Or message me on Instagram or LinkedIn using the links below.</p>
-
-           <a href="https://www.instagram.com/thecalebgrover" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/caleb-grover" target="_blank">LinkedIn</a>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>Website designed and built by Caleb Grover</p>
-        <p>© 2026 Caleb Grover</p>
-    </footer>
-
-    <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
